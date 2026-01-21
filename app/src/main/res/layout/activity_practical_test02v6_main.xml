@@ -158,7 +158,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:text="USD"
-            android:inputType="number"
             android:hint="USD sau EUR"
             android:textColor="#000000"
             android:textColorHint="#555555"

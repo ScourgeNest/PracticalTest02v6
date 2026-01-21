@@ -15,6 +15,6 @@ object Constants {
 //    const val API_KEY = "e03c3b32cfb5a6f7069f2ef29237d87e"
 
     // URL-ul de baza pentru OpenWeatherMap
-    const val API_URL = "https://data-api.coindesk.com/index/cc/v1/latest/tick?market=cadli&instruments=BTC-USD"
+    const val API_URL = "https://data-api.coindesk.com/index/cc/v1/latest/tick?market=cadli&instruments=BTC-"
 
 }

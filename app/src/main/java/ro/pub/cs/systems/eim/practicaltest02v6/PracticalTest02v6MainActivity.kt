@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import ro.pub.cs.systems.eim.practicaltest02v6.general.Constants
 import ro.pub.cs.systems.eim.practicaltest02v6.network.ClientThread
 import ro.pub.cs.systems.eim.practicaltest02v6.network.ServerThread
 
@@ -85,7 +86,6 @@ class PracticalTest02v6MainActivity : AppCompatActivity() {
                 clientAddress,
                 clientPort.toInt(),
                 city,
-                informationType,
                 clientResultTextView
             )
             clientThread.start()

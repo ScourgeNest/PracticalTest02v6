@@ -1,6 +1,7 @@
 package ro.pub.cs.systems.eim.practicaltest02v6.network
 
 import android.util.Log
+import ro.pub.cs.systems.eim.practicaltest02v6.general.BitcoinInformation
 import ro.pub.cs.systems.eim.practicaltest02v6.general.Constants
 import java.io.IOException
 import java.net.ServerSocket
@@ -13,7 +14,7 @@ class ServerThread(private val port: Int) : Thread() {
 
     // MODIFICARE 2 (Cerinta 3a): Cache-ul local
     // Cheia este orasul (String), Valoarea este obiectul meteo
-    private val data = HashMap<LocalDateTime, Float>()
+    private val data = HashMap<String, BitcoinInformation>()
 
     fun startServer() {
         start()
@@ -31,12 +32,12 @@ class ServerThread(private val port: Int) : Thread() {
     // MODIFICARE 3: Metode sincronizate pentru lucrul cu Cache-ul
     // Este vital sa fie @Synchronized pentru ca mai multi clienti pot scrie/citi simultan
     @Synchronized
-    fun setData(time: LocalDateTime, bitcoinInformation: Float) {
-        this.data[time] = bitcoinInformation
+    fun setData(moneda: String, bitcoinInformation: BitcoinInformation) {
+        this.data[moneda] = bitcoinInformation
     }
 
     @Synchronized
-    fun getData(): HashMap<LocalDateTime, Float> {
+    fun getData(): HashMap<String, BitcoinInformation> {
         return this.data
     }
 
